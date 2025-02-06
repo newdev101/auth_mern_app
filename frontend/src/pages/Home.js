@@ -23,7 +23,7 @@ function Home() {
 
   const fetchProducts = async ()=>{
     try{
-      const url = "http://localhost:8080/products";
+      const url = `${process.env.REACT_APP_BACKEND_BASE_API_URL}products`;
       const headers = {
         headers:{
           "authorization":localStorage.getItem('token')
